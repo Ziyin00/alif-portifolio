@@ -45,7 +45,7 @@ const services = [
 
 export function WhatWeDo() {
   return (
-    <section className="bg-white py-24 sm:py-32 md:mt-20 -mt-20 ">
+    <section className="bg-white py-24 sm:py-32 md:mt-20 -mt-20 " id='service'>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header Section */}
         <div className="mx-auto max-w-2xl md:text-center relative">

@@ -4,14 +4,14 @@ import { Sliders } from "../core/slider";
 
 export function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="relative  h-[100vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#0745FA] via-[#012c7d9a] to-[#0000008b]">
 
 
 
       {/* Background Pattern */}
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-5xl mx-auto -mt-36">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-5xl mx-auto md:-mt-36 -mt-40">
         {/* Welcome Badge */}
         <div className="mb-6">
           <span className="inline-block border border-white/30 rounded-full px-4 py-1 text-sm text-white cursor-pointer hover:border-white/50 transition-colors">
@@ -20,7 +20,7 @@ export function Hero() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white max-w-5xl leading-tight mb-6">
+        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white max-w-5xl leading-tight md:mb-6">
           where innovation meets purpose.
         </h1>
         
@@ -31,7 +31,7 @@ export function Hero() {
         </p>
 
         {/* CTA Button */}
-        <div className="my-8">
+        <div className="my-8" >
           <Button size="lg" className="bg-white text-black font-bold hover:bg-gray-200 px-8 py-4 text-lg transition-all duration-300">
             Explore
           </Button>

@@ -30,7 +30,7 @@ export function GetInTouch() {
   
 
   return (
-    <section className="bg-gray-100 py-24 sm:py-32">
+    <section className="bg-gray-100 py-24 sm:py-32" id="contact">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         
         {/* Header */}

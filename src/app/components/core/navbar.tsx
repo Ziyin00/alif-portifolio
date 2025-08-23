@@ -41,33 +41,36 @@ export function Navbar() {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image
-          src="/alif-logo.png"
+          src="/Vector-1.png"
           alt="Alif-logo"
-          width={20}
-          height={20}
+          width={40}
+          height={40}
         />
         <span className="text-xl font-bold text-white">Alif Tech</span>
       </div>
 
       {/* Nav Links */}
       <nav className="hidden md:flex items-center space-x-8">
-        <Link href="/" className="text-white hover:text-gray-300 transition-colors">
+        <Link href="#hero" className="text-white hover:text-gray-300 transition-colors">
           Home
         </Link>
-        <Link href="/" className="text-white hover:text-gray-300 transition-colors">
+        <Link href="#service" className="text-white hover:text-gray-300 transition-colors">
           Services
         </Link>
-        <Link href="/" className="text-white hover:text-gray-300 transition-colors">
+        <Link href="#projects" className="text-white hover:text-gray-300 transition-colors">
           Career
         </Link>
-        <Link href="/" className="text-white hover:text-gray-300 transition-colors">
+        <Link href="#contact" className="text-white hover:text-gray-300 transition-colors">
           Contact
         </Link>
       </nav>
 
       {/* Button */}
       <Button className="bg-transparent border border-s text-white font-bold hover:bg-opacity-5 transition-colors px-7">
+        <Link href="#contact">
+        
         Explore
+        </Link>
       </Button>
     </header>
   );

@@ -32,7 +32,7 @@ const projects = [
 
 export function SuccessStories() {
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className="bg-white py-24 sm:py-32" id='projects'>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header Section */}
         <div className="mx-auto max-w-2xl text-center relative">

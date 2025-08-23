@@ -38,7 +38,7 @@ export function Sliders() {
                     <p>10:32 AM</p>
                   </div>
                   <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Meet the brilliant minds at Alif Tech Group who bring ideas to life with creativity and expertise.
                   </p>
                 </div>
               </div>
@@ -61,8 +61,7 @@ export function Sliders() {
                     <p>10:32 AM</p>
                   </div>
                   <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  Meet the brilliant minds at Alif Tech Group who bring ideas to life with creativity and expertise.                  </p>
                 </div>
               </div>
             ))}
