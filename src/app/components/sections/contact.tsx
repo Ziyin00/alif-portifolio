@@ -27,6 +27,7 @@ const TwitterIcon = (props: SVGProps<SVGSVGElement>) => (
 export function GetInTouch() {
 
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string>('');
   
 
   return (
@@ -54,11 +55,18 @@ export function GetInTouch() {
         </div>
 
         {/* Form */}
-        <form  action="mailto:nesredinhaji715@gmail.com" 
-  method="POST"
-  encType="text/plain"
-  className="mt-16"
-   >
+        <form  
+          onSubmit={(e) => {
+            e.preventDefault();
+            setLoading(true);
+            setStatus('Message sent successfully!');
+            setTimeout(() => {
+              setLoading(false);
+              setStatus('');
+            }, 2000);
+          }}
+          className="mt-16"
+        >
             <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
                 <div>
                     <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">Your Name</label>
