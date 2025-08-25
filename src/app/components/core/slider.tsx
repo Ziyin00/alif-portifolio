@@ -1,45 +1,79 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
+// Data array with new, shorter descriptions
 const sliderItems = [
-  { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 },
+  {
+    id: 1,
+    title: "Strategic Partner",
+    description: "Your vision, engineered for scalable growth and industry leadership.",
+  },
+  {
+    id: 2,
+    title: "Engineering Excellence",
+    description: "Secure, high-performance platforms built on a foundation of quality code.",
+  },
+  {
+    id: 3,
+    title: "Integrated Solutions",
+    description: "Seamless, end-to-end solutions for a powerful and unified digital ecosystem.",
+  },
+  {
+    id: 4,
+    title: "User-Centric Design",
+    description: "Powerful engineering meets intuitive design for experiences your users will love.",
+  },
+  {
+    id: 5,
+    title: "Results-Driven Innovation",
+    description: "Gain a competitive edge with custom technology built to deliver measurable results.",
+  },
 ];
 
 export function Sliders() {
+  // Duplicating items for a seamless looping animation
   const duplicatedItems = [...sliderItems, ...sliderItems];
 
-  const sliderVariants = (direction: 'left' | 'right') => ({
-    animate: {
-      x: direction === 'left' ? ['0%', '-50%'] : ['-50%', '0%'],
-      transition: {
-        ease: 'linear' as const,
-        duration: 30,
-        repeat: Infinity,
-        repeatType: 'loop' as const,
-      },
-    },
-  });
+  // Animation controls from Framer Motion to allow pausing/resuming
+  const topControls = useAnimation();
+  const bottomControls = useAnimation();
+
+  // Animation definitions
+  const topAnimation = {
+    x: ['0%', '-50%'],
+    transition: { ease: 'linear', duration: 45, repeat: Infinity, repeatType: 'loop' as const },
+  };
+  const bottomAnimation = {
+    x: ['-50%', '0%'],
+    transition: { ease: 'linear', duration: 45, repeat: Infinity, repeatType: 'loop' as const },
+  };
+
+  // Start animations when the component mounts
+  useEffect(() => {
+    topControls.start(topAnimation);
+    bottomControls.start(bottomAnimation);
+  }, [topControls, bottomControls]);
 
   return (
     <div className="absolute bottom-0 left-0 right-0 px-4 py-10 w-full overflow-hidden">
       <div className="space-y-4">
+        
         {/* Top Slider (moves to the left) */}
-        <div className="relative h-32 overflow-hidden">
-          <motion.div
-            className="absolute left-0 flex"
-            variants={sliderVariants('left')}
-            animate="animate"
-          >
+        <div 
+          className="relative h-32 overflow-hidden"
+          onMouseEnter={() => topControls.stop()}
+          onMouseLeave={() => topControls.start(topAnimation)}
+        >
+          <motion.div className="absolute left-0 flex" animate={topControls}>
             {duplicatedItems.map((item, i) => (
-              <div key={i} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
-                <div className={`w-full h-full rounded-lg p-4 border border-white/20 text-left ${ i === 2 ? 'bg-white/90 text-black shadow-lg' : 'bg-white/10 text-white backdrop-blur-sm' }`}>
+              <div key={`top-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
+                <div className={`w-full h-full rounded-lg p-4 border border-white/20 text-left transition-colors duration-300  hover:text-black hover:shadow-lg hover:bg-white/90 text-white opacity-50 hover:opacity-100`}>
                   <div className="flex justify-between text-sm mb-2">
-                    <p className="font-bold">LanguageGUI</p>
+                    <p className="font-bold">{item.title}</p>
                     <p>10:32 AM</p>
                   </div>
-                  <p className="text-sm">
-                  Meet the brilliant minds at Alif Tech Group who bring ideas to life with creativity and expertise.
-                  </p>
+                  <p className="text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -47,26 +81,26 @@ export function Sliders() {
         </div>
         
         {/* Bottom Slider (moves to the right) */}
-        <div className="relative h-32 overflow-hidden">
-          <motion.div
-            className="absolute left-0 flex"
-            variants={sliderVariants('right')}
-            animate="animate"
-          >
+        <div 
+          className="relative h-32 overflow-hidden"
+          onMouseEnter={() => bottomControls.stop()}
+          onMouseLeave={() => bottomControls.start(bottomAnimation)}
+        >
+          <motion.div className="absolute left-0 flex" animate={bottomControls}>
             {duplicatedItems.map((item, i) => (
-              <div key={i} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
-                <div className="w-full h-full rounded-lg p-4 border border-white/20 text-left bg-white/10 text-white backdrop-blur-sm">
+              <div key={`bottom-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
+                <div className="w-full h-full rounded-lg p-4 border border-white/20 text-left text-white backdrop-blur-sm hover:bg-white/90 transition-colors duration-300 hover:text-black hover:shadow-lg  opacity-50 hover:opacity-100">
                   <div className="flex justify-between text-sm mb-2">
-                    <p className="font-bold">LanguageGUI</p>
+                    <p className="font-bold">{item.title}</p>
                     <p>10:32 AM</p>
                   </div>
-                  <p className="text-sm">
-                  Meet the brilliant minds at Alif Tech Group who bring ideas to life with creativity and expertise.                  </p>
+                  <p className="text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
+        
       </div>
     </div>
   );

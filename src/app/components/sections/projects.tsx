@@ -50,7 +50,7 @@ export function SuccessStories() {
             Discover Our Success Stories
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Behind every great innovation is a passionate and skilled team. Meet the brilliant minds at Alif Tech Group who bring ideas to life with creativity and expertise.
+            Behind every great innovation is a passionate and skilled team. Meet the brilliant minds at Arsion Tech Group who bring ideas to life with creativity and expertise.
           </p>
         </div>
 

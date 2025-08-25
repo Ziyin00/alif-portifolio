@@ -32,7 +32,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 max-w-screen mx-auto w-full transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 max-w-[screen] mx-auto w-full transition-all duration-300 ${
         isScrolled
           ? "bg-gradient-to-br from-[#0745FA] to-[#012c7ddc] backdrop-blur-md shadow-lg"
           : "bg-transparent"
@@ -42,11 +42,11 @@ export function Navbar() {
       <div className="flex items-center gap-2">
         <Image
           src="/Vector-1.png"
-          alt="Alif-logo"
+          alt="Arsion-logo"
           width={40}
           height={40}
         />
-        <span className="text-xl font-bold text-white">Alif Tech</span>
+        <span className="text-xl font-extrabold text-white">Arsion Tech</span>
       </div>
 
       {/* Nav Links */}

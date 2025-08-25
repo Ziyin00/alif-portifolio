@@ -44,7 +44,7 @@ export function JoinBeta() {
                 {/* Description Text Below Marquee */}
                 <div className="mt-10 text-center max-w-4xl mx-auto">
                     <p className="text-lg leading-8 text-gray-600">
-                        Behind every great innovation is a passionate and skilled team. Meet the brilliant minds at Alif Tech Group who bring ideas to life with creativity and expertise.
+                        Behind every great innovation is a passionate and skilled team. Meet the brilliant minds at Arsion Tech Group who bring ideas to life with creativity and expertise.
                     </p>
                 </div>
 

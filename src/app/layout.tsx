@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alif Tech",
+  title: "Arsion Tech",
   description: "Where innovation meets purpose.",
 };
 

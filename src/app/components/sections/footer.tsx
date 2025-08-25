@@ -20,13 +20,13 @@ const TwitterIcon = (props: SVGProps<SVGSVGElement>) => (
 
 const quickLinks = {
   column1: [
-    { title: 'Home', href: '#' },
-    { title: 'About Us', href: '#' },
-    { title: 'Contact', href: '#' },
+    { title: 'Home', href: '#hero' },
+    { title: 'About Us', href: '#about' },
+    { title: 'Contact', href: '#contact' },
   ],
   column2: [
-    { title: 'Services', href: '#' },
-    { title: 'Our Team', href: '#' },
+    { title: 'Services', href: '#service' },
+    { title: 'Our Work', href: '#projects' },
   ],
 };
 
@@ -47,7 +47,7 @@ export function Footer() {
           
           {/* Left Section: Brand Info & Socials */}
           <div className="max-w-sm">
-            <h3 className="font-bold text-2xl text-white">Alif Tech</h3>
+            <h3 className="font-bold text-2xl text-white">Arsion Tech</h3>
             <p className="mt-3 leading-relaxed">
               Crafting Tech Solutions That Shape the Future.
             </p>
@@ -81,7 +81,7 @@ export function Footer() {
         {/* Bottom Section: Divider & Copyright */}
         <div className="mt-12 border-t border-white/20 pt-8">
           <p className="text-center text-sm text-gray-400">
-            © 2025 Alif Tech Group. All Rights Reserved.
+            © 2025 Arsion Tech Group. All Rights Reserved.
           </p>
         </div>
       </footer>

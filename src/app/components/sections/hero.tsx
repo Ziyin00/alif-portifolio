@@ -15,7 +15,7 @@ export function Hero() {
         {/* Welcome Badge */}
         <div className="mb-6">
           <span className="inline-block border border-white/30 rounded-full px-4 py-1 text-sm text-white cursor-pointer hover:border-white/50 transition-colors">
-            Welcome to Alif Tech &rsaquo;
+            Welcome to Arsion Tech &rsaquo;
           </span>
         </div>
 
