@@ -42,11 +42,11 @@ export function Sliders() {
   // Animation definitions
   const topAnimation = {
     x: ['0%', '-50%'],
-    transition: { ease: 'linear', duration: 45, repeat: Infinity, repeatType: 'loop' as const },
+    transition: { ease: 'linear' as const, duration: 45, repeat: Infinity, repeatType: 'loop' as const },
   };
   const bottomAnimation = {
     x: ['-50%', '0%'],
-    transition: { ease: 'linear', duration: 45, repeat: Infinity, repeatType: 'loop' as const },
+    transition: { ease: 'linear' as const, duration: 45, repeat: Infinity, repeatType: 'loop' as const },
   };
 
   // Start animations when the component mounts
