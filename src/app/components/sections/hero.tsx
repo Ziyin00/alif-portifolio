@@ -5,7 +5,7 @@ import { Sliders } from "../core/slider";
 export function Hero() {
   return (
     <section className="hero" id="hero">
-      <div className="relative  h-[100vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#0745FA] via-[#012c7d9a] to-[#0000008b]">
+      <div className="relative  h-[100vh] scroll-pb-20   flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#0745FA] via-[#012c7d9a] to-[#0000008b]">
 
 
 
@@ -39,7 +39,10 @@ export function Hero() {
       </div>
 
       {/* Sliders */}
+      <div className="">
+
       <Sliders />
+      </div>
       </div>
     </section>
   );

@@ -56,20 +56,20 @@ export function Sliders() {
   }, [topControls, bottomControls]);
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 px-4 md:py-10 py-6 w-full overflow-hidden">
+    <div className="absolute bottom-0 left-0 right-0 px-4 md:py-10 pb-4 w-full overflow-hidden">
       <div className="space-y-4">
         
         {/* Top Slider (moves to the left) */}
         <div 
-          className="relative md:h-32 h-24 overflow-hidden"
+          className="relative md:h-32 h-24 "
           onMouseEnter={() => topControls.stop()}
           onMouseLeave={() => topControls.start(topAnimation)}
         >
           <motion.div className="absolute left-0 flex" animate={topControls}>
             {duplicatedItems.map((item, i) => (
               <div key={`top-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
-                <div className={`w-full h-full rounded-lg p-4 border border-white/20 text-left transition-colors duration-300  hover:text-black hover:shadow-lg hover:bg-white/90 text-white opacity-50 hover:opacity-100`}>
-                  <div className="flex justify-between text-sm mb-2">
+                <div className={`w-full h-full rounded-lg px-4 py-2 border border-white/20 text-left transition-colors duration-300  hover:text-black hover:shadow-lg hover:bg-white/90 text-white opacity-50 hover:opacity-100`}>
+                  <div className="flex justify-between text-sm mb-1">
                     <p className="font-bold">{item.title}</p>
                   </div>
                   <p className="text-sm">{item.description}</p>
@@ -81,7 +81,7 @@ export function Sliders() {
         
         {/* Bottom Slider (moves to the right) */}
         <div 
-          className="relative md:h-32 h-24 overflow-hidden"
+          className="relative md:h-32 h-28"
           onMouseEnter={() => bottomControls.stop()}
           onMouseLeave={() => bottomControls.start(bottomAnimation)}
         >
@@ -89,7 +89,7 @@ export function Sliders() {
             {duplicatedItems.map((item, i) => (
               <div key={`bottom-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
                 <div className="w-full h-full rounded-lg p-4 border border-white/20 text-left text-white backdrop-blur-sm hover:bg-white/90 transition-colors duration-300 hover:text-black hover:shadow-lg  opacity-50 hover:opacity-100">
-                  <div className="flex justify-between text-sm mb-2">
+                  <div className="flex justify-between text-sm mb-1">
                     <p className="font-bold">{item.title}</p>
                   </div>
                   <p className="text-sm">{item.description}</p>
