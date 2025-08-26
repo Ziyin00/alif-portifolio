@@ -25,13 +25,13 @@ export function Hero() {
         </h1>
         
         {/* Description */}
-        <p className="mt-4 text-lg text-gray-300 max-w-2xl leading-relaxed">
+        <p className="mt-4 md:text-lg text-gray-300 max-w-2xl md:leading-relaxed">
           We craft solutions that transform ideas into impactful digital experiences. 
           Let&apos;s lead the tech revolution together.
         </p>
 
         {/* CTA Button */}
-        <div className="my-8" >
+        <div className="md:my-8 my-2" >
           <Button size="lg" className="bg-white text-black font-bold hover:bg-gray-200 px-8 py-4 text-lg transition-all duration-300">
             Explore
           </Button>

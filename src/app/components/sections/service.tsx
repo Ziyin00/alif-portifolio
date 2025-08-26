@@ -80,7 +80,7 @@ export function WhatWeDo() {
 alt="Our Services"
 width={1000}
 height={400}
-className="w-[95%] h-[600px] object-cover rounded-2xl shadow-xl"
+className="w-[95%] md:h-[600px] h-[400px] object-cover rounded-2xl shadow-xl"
 
 />
 

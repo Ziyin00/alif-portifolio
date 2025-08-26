@@ -10,7 +10,7 @@ export function WhoWeAre() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-16 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           
           {/* Image Column */}
-          <div className="relative h-[500px] -mt-24 lg:h-full">
+          <div className="relative h-[500px] md:-mt-24 -mt-10 lg:h-full">
             <div className="absolute top-0 left-0 w-[70%] lg:w-[80%] z-10">
               <Image
                 src="/about-1.png" // Replace with your top image
@@ -41,7 +41,7 @@ export function WhoWeAre() {
           </div>
           
           {/* Text Content Column */}
-          <div className="lg:pl-8 lg:pt-4 -mt-36 md:mt-0">
+          <div className="lg:pl-8 lg:pt-4 -mt-52 md:mt-0">
             <div className="relative">
                <div className="absolute -top-8 right-24 flex items-center">
                <Image 

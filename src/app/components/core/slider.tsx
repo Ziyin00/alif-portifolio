@@ -56,12 +56,12 @@ export function Sliders() {
   }, [topControls, bottomControls]);
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 px-4 py-10 w-full overflow-hidden">
+    <div className="absolute bottom-0 left-0 right-0 px-4 md:py-10 py-6 w-full overflow-hidden">
       <div className="space-y-4">
         
         {/* Top Slider (moves to the left) */}
         <div 
-          className="relative h-32 overflow-hidden"
+          className="relative md:h-32 h-24 overflow-hidden"
           onMouseEnter={() => topControls.stop()}
           onMouseLeave={() => topControls.start(topAnimation)}
         >
@@ -82,7 +82,7 @@ export function Sliders() {
         
         {/* Bottom Slider (moves to the right) */}
         <div 
-          className="relative h-32 overflow-hidden"
+          className="relative md:h-32 h-24 overflow-hidden"
           onMouseEnter={() => bottomControls.stop()}
           onMouseLeave={() => bottomControls.start(bottomAnimation)}
         >
