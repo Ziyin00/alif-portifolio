@@ -6,30 +6,30 @@ const projects = [
   {
     imageSrc: '/zadul-mead_app.jpg', 
     title: 'Zadul-Mead - Elearning Application',
-    description: 'A mobile-first eLearning application designed to provide students with an interactive and user-friendly digital learning experience. Features include course management, progress tracking, and seamless collaboration between learners and instructors.',
+    description: 'A mobile-first religious eLearning platform that combines tradition with technology. Featuring live classes, structured courses, progress tracking, interactive assessments, and community engagement, it empowers learners to access spiritual knowledge anytime, anywhere in a modern and meaningful way.',
     tags: ['Mobile App', 'E-Learning', 'UI/UX', 'SaaS'],
-    // link: 'https://example.com/zadul-mead-app', 
+    link: 'https://zadalmead.com/', 
   },
   {
     imageSrc: '/voomGo.jpg', 
-    title: 'VoomGo - Ride and Delivery Service',
-    description: 'A modern ride-hailing and delivery service platform built for efficiency, speed, and security. VoomGo connects users with drivers to provide convenient transportation and on-demand delivery solutions.',
+    title: 'Zyli - Ride and Delivery Service',
+    description: 'A fast, secure, and reliable platform that connects users with drivers for rides and on-demand deliveries. Zyli offers real-time tracking, seamless payments, and a user-friendly experience making transportation and delivery smarter and more convenient.',
     tags: ['Ride-Hailing', 'Delivery', 'On-Demand Service', 'Web App'],
-    // link: 'https://example.com/voomgo',
+    link: '',
   },
   {
     imageSrc: '/voomGo.jpg', 
-    title: 'VoomGo - Rider & Driver Management System',
-    description: 'An advanced web-based management system designed for VoomGo to efficiently handle rider onboarding, driver management, trip monitoring, and secure payment integrations for smooth operations.',
+    title: 'Zyli - Rider & Driver Management System',
+    description: 'A fast, secure, and reliable platform that connects users with drivers for rides and on-demand deliveries. Zyli offers real-time tracking, seamless payments, and a user-friendly experience making transportation and delivery smarter and more convenient.',
     tags: ['Admin Dashboard', 'Management System', 'Payments', 'Web Platform'],
-    // link: 'https://example.com/voomgo-admin', 
+    link: '', 
   },
   {
     imageSrc: '/zadul-mead_web.jpg', 
     title: 'Zadul-Mead - Elearning Website',
-    description: 'A professional eLearning website built to deliver accessible education online. It provides a responsive design, easy course navigation, and integration with modern eLearning tools for students and educators.',
+    description: 'A professional religious eLearning platform designed to make spiritual education accessible worldwide. With a responsive design, intuitive course navigation, live sessions, and seamless integration of modern learning tools, it connects students and scholars in a meaningful digital learning experience.',
     tags: ['Website', 'E-Learning', 'Web Development', 'Education'],
-    // link: 'https://example.com/zadul-mead-web', 
+    link: 'https://zadalmead.com/', 
   },
 ];
 
@@ -60,7 +60,7 @@ export function SuccessStories() {
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {projects.map((project) => (
             <div key={project.title} className="bg-slate-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
-              <div className="overflow-hidden rounded-xl">
+              <Link href={project.link} className="overflow-hidden rounded-xl">
                 <Image
                   src={project.imageSrc}
                   alt={project.title}
@@ -68,7 +68,7 @@ export function SuccessStories() {
                   height={600}
                   className="rounded-xl w-full object-cover transform transition duration-500 hover:scale-110"
                 />
-              </div>
+              </Link>
 
               <div className="mt-6">
                 <h3 className="text-xl font-semibold leading-8 text-gray-900">
