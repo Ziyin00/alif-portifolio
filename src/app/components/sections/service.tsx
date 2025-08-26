@@ -46,7 +46,7 @@ const services = [
 
 export function WhatWeDo() {
   // State to hold the current image source for the minor image
-  const [hoveredImage, setHoveredImage] = useState('/services_main.gif');
+  const [hoveredImage, setHoveredImage] = useState('/defualt.gif');
 
   return (
     <section className="bg-white py-24 sm:py-32 md:mt-20 -mt-20 " id='service'>
