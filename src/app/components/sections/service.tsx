@@ -98,7 +98,7 @@ className="w-[95%] h-[600px] object-cover rounded-2xl shadow-xl"
         {/* Services Grid - UPDATED with mouse event handlers */}
         <div 
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3"
-          onMouseLeave={() => setHoveredImage('/service-minor.png')} // Reset image when mouse leaves the grid
+          onMouseLeave={() => setHoveredImage('/services_main.gif')} // Reset image when mouse leaves the grid
         >
           {services.map((service) => (
             <div 
