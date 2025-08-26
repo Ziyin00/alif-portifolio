@@ -71,7 +71,6 @@ export function Sliders() {
                 <div className={`w-full h-full rounded-lg p-4 border border-white/20 text-left transition-colors duration-300  hover:text-black hover:shadow-lg hover:bg-white/90 text-white opacity-50 hover:opacity-100`}>
                   <div className="flex justify-between text-sm mb-2">
                     <p className="font-bold">{item.title}</p>
-                    <p>10:32 AM</p>
                   </div>
                   <p className="text-sm">{item.description}</p>
                 </div>
@@ -92,7 +91,6 @@ export function Sliders() {
                 <div className="w-full h-full rounded-lg p-4 border border-white/20 text-left text-white backdrop-blur-sm hover:bg-white/90 transition-colors duration-300 hover:text-black hover:shadow-lg  opacity-50 hover:opacity-100">
                   <div className="flex justify-between text-sm mb-2">
                     <p className="font-bold">{item.title}</p>
-                    <p>10:32 AM</p>
                   </div>
                   <p className="text-sm">{item.description}</p>
                 </div>
