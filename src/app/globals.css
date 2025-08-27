@@ -39,3 +39,94 @@
     padding-bottom: 10px;
   }
 }
+
+
+/* Add this to your global CSS file or a module that's imported */
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  /* Mask the duplicate items at the start/end for the "infinite" feel */
+}
+
+.slider-track {
+  display: flex;
+  width: max-content; /* Allows all items to be in one row */
+  animation: scroll-left 30s linear infinite; /* Adjust duration for speed */
+}
+
+/* Pause animation on hover */
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.slider-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 300px; /* Adjust card width as needed */
+  margin-right: 2rem; /* Spacing between cards */
+  padding: 1rem; /* Padding for the item itself, adjusting the effective width */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) { /* md breakpoint */
+  .slider-item {
+    width: 380px; /* Larger cards on medium screens */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .slider-item {
+    width: 420px; /* Even larger cards on large screens */
+  }
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+   
+    transform: translateX(calc(-3 * (300px + 2rem + 2rem))); /* (item-width + margin-right + padding*2 for a better estimate) */
+
+    transform: translateX(-50%); /* Simplified for an arbitrarily long track with duplicates */
+  }
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+  
+    transform: translateX(calc(-1 * (var(--item-width) + var(--item-margin)) * var(--num-original-items)));
+  }
+}
+
+.slider-container {
+  --item-width: 300px; 
+  --item-margin: 2rem; 
+  --num-original-items: 3; 
+}
+
+@media (min-width: 768px) {
+  .slider-container {
+    --item-width: 380px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-container {
+    --item-width: 420px;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * (var(--item-width) + var(--item-margin)) * var(--num-original-items)));
+  }
+}
