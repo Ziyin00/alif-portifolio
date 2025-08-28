@@ -2,9 +2,8 @@
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../ui/button";
-import { SVGProps, useState } from 'react';
+import { SVGProps, useState } from "react";
 
-// Social Icon components for clarity
 const FacebookIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
     <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
@@ -25,80 +24,89 @@ const TwitterIcon = (props: SVGProps<SVGSVGElement>) => (
 
 
 export function GetInTouch() {
-
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState<string>('');
-  
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const mailtoLink = `mailto:ziyinab00@gmail.com?subject=Message from ${encodeURIComponent(
+      String(name)
+    )}&body=From: ${encodeURIComponent(String(name))} (${encodeURIComponent(
+      String(email)
+    )})%0D%0A%0D%0A${encodeURIComponent(String(message))}`;
+
+    window.location.href = mailtoLink;
+
+    setTimeout(() => setLoading(false), 1000);
+  };
 
   return (
     <section className="bg-gray-100 py-24 sm:py-32" id="contact">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        
         {/* Header */}
         <div className="flex justify-between items-start">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                Get in touch with us.
-                <br />
-                We&apos;re here to assist you.
-            </h2>
-            <div className="flex flex-col space-y-4">
-                <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition">
-                    <FacebookIcon className="h-5 w-5" />
-                </a>
-                <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition">
-                    <InstagramIcon className="h-5 w-5" />
-                </a>
-                <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition">
-                    <TwitterIcon className="h-5 w-5" />
-                </a>
-            </div>
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            Get in touch with us.
+            <br />
+            We&apos;re here to assist you.
+          </h2>
+          <div className="flex flex-col space-y-4">
+            <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition">
+              <FacebookIcon className="h-5 w-5" />
+            </a>
+            <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition">
+              <InstagramIcon className="h-5 w-5" />
+            </a>
+            <a href="#" className="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition">
+              <TwitterIcon className="h-5 w-5" />
+            </a>
+          </div>
         </div>
 
         {/* Form */}
-        <form  
-          onSubmit={(e) => {
-            e.preventDefault();
-            setLoading(true);
-            setStatus('Message sent successfully!');
-            setTimeout(() => {
-              setLoading(false);
-              setStatus('');
-            }, 2000);
-          }}
-          className="mt-16"
-        >
-            <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
-                <div>
-                    <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">Your Name</label>
-                    <div className="mt-2.5">
-                        <Input type="text" id="name" name="name" required className="block w-full border-0 border-b border-gray-400 bg-transparent py-2 px-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 focus:border-blue-600 sm:text-sm sm:leading-6"/>
-                    </div>
-                </div>
-                <div>
-                    <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">Email Address</label>
-                    <div className="mt-2.5">
-                        <Input type="email" id="email" name="email" required className="block w-full border-0 border-b border-gray-400 bg-transparent py-2 px-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 focus:border-blue-600 sm:text-sm sm:leading-6"/>
-                    </div>
-                </div>
-                <div className="sm:col-span-2">
-                    <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">Message</label>
-                    <div className="mt-2.5">
-                        <Textarea id="message" name="message" required rows={4} className="block w-full border-0 border-b border-gray-400 bg-transparent py-2 px-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 focus:border-blue-600 sm:text-sm sm:leading-6"/>
-                    </div>
-                </div>
+        <form onSubmit={handleSubmit} className="mt-16">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
+            <div>
+              <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
+                Your Name
+              </label>
+              <div className="mt-2.5">
+                <Input type="text" id="name" name="name" required />
+              </div>
             </div>
-            <div className="mt-10">
-                 <Button
+            <div>
+              <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+                Email Address
+              </label>
+              <div className="mt-2.5">
+                <Input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                Message
+              </label>
+              <div className="mt-2.5">
+                <Textarea id="message" name="message" required rows={4} />
+              </div>
+            </div>
+          </div>
+          <div className="mt-10">
+            <Button
               type="submit"
               size="lg"
               disabled={loading}
               className="bg-blue-600 text-white font-bold rounded-lg px-6 py-4 transition-all hover:bg-blue-700 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              {loading ? "Sending..." : "Leave us a Message →"}
+              {loading ? "Preparing Email..." : "Leave us a Message →"}
             </Button>
-            </div>
-            {status && <p className="mt-4 text-sm">{status}</p>}
-
+          </div>
         </form>
       </div>
     </section>

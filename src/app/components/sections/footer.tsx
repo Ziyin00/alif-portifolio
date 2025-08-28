@@ -17,6 +17,17 @@ const LinkedInIcon = (props: SVGProps<SVGSVGElement>) => (
 const TwitterIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg fill="currentColor" viewBox="0 0 24 24" {...props}><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.5 3.375 4.7 3.41A9.87 9.87 0 010 17.54a13.94 13.94 0 007.548 2.212c9.058 0 14.01-7.502 14.01-14.01 0-.213-.005-.426-.015-.637a9.954 9.954 0 002.433-2.52z" /></svg>
 );
+const PhoneIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.73-.24 1.01l-2.21 2.2z" />
+  </svg>
+);
+
+
 
 const quickLinks = {
   column1: [
@@ -32,10 +43,11 @@ const quickLinks = {
 
 const socialLinks = [
   { href: '#', icon: InstagramIcon },
-  { href: '#', icon: TelegramIcon },
+  { href: 'https://t.me/arsion_tech', icon: TelegramIcon },
   { href: '#', icon: FacebookIcon },
   { href: '#', icon: LinkedInIcon },
   { href: '#', icon: TwitterIcon },
+  {href: 'tel:+251932751336', icon: PhoneIcon}
 ];
 
 export function Footer() {
