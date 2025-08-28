@@ -8,7 +8,7 @@ const projects = [
     title: 'Zadul-Mead - Elearning Application',
     description: 'A mobile-first religious eLearning app combining tradition with technology. With live classes, structured courses, progress tracking, and community engagement, it makes spiritual learning accessible anytime, anywhere.',
     tags: ['Mobile App', 'E-Learning', 'UI/UX', 'SaaS'],
-    link: 'https://zadalmead.com/',
+    link: 'https://play.google.com/store/apps/details?id=com.alif.zadulmead_islamic_center_app',
   },
   {
     imageSrc: '/voomGo.jpg',
@@ -22,7 +22,7 @@ const projects = [
     title: 'Zadul-Mead - Elearning Website',
     description: 'A responsive eLearning website built to make religious education accessible worldwide. With live sessions, easy course navigation, and modern learning tools, it connects students and scholars in a meaningful way.',
     tags: ['Website', 'E-Learning', 'Web Development', 'Education'],
-    link: 'https://zadalmead.com/',
+    link: 'https://zadulmead.org/',
   },
   // Duplicate projects to ensure a seamless "infinite" loop effect
   // In a real-world scenario with many projects, you might dynamically
@@ -32,7 +32,7 @@ const projects = [
     title: 'Zadul-Mead - Elearning Application',
     description: 'A mobile-first religious eLearning app combining tradition with technology. With live classes, structured courses, progress tracking, and community engagement, it makes spiritual learning accessible anytime, anywhere.',
     tags: ['Mobile App', 'E-Learning', 'UI/UX', 'SaaS'],
-    link: 'https://zadalmead.com/',
+    link: 'https://play.google.com/store/apps/details?id=com.alif.zadulmead_islamic_center_app',
   },
   {
     imageSrc: '/voomGo.jpg',
@@ -46,7 +46,7 @@ const projects = [
     title: 'Zadul-Mead - Elearning Website',
     description: 'A responsive eLearning website built to make religious education accessible worldwide. With live sessions, easy course navigation, and modern learning tools, it connects students and scholars in a meaningful way.',
     tags: ['Website', 'E-Learning', 'Web Development', 'Education'],
-    link: 'https://zadalmead.com/',
+    link: 'https://zadulmead.org/',
   },
 ];
 

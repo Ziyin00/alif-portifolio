@@ -65,7 +65,7 @@ export function Sliders() {
           onMouseEnter={() => topControls.stop()}
           onMouseLeave={() => topControls.start(topAnimation)}
         >
-          <motion.div className="absolute left-0 flex" animate={topControls}>
+          <motion.div className="absolute left-0 flex md:h-full" animate={topControls}>
             {duplicatedItems.map((item, i) => (
               <div key={`top-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
                 <div className={`w-full h-full rounded-lg px-4 py-2 border border-white/20 text-left transition-colors duration-300  hover:text-black hover:shadow-lg hover:bg-white/90 text-white opacity-50 hover:opacity-100`}>
@@ -85,7 +85,7 @@ export function Sliders() {
           onMouseEnter={() => bottomControls.stop()}
           onMouseLeave={() => bottomControls.start(bottomAnimation)}
         >
-          <motion.div className="absolute left-0 flex" animate={bottomControls}>
+          <motion.div className="absolute left-0 flex md:h-full" animate={bottomControls}>
             {duplicatedItems.map((item, i) => (
               <div key={`bottom-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px] p-2">
                 <div className="w-full h-full rounded-lg p-4 border border-white/20 text-left text-white backdrop-blur-sm hover:bg-white/90 transition-colors duration-300 hover:text-black hover:shadow-lg  opacity-50 hover:opacity-100">
