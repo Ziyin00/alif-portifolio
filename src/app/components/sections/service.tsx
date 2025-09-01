@@ -88,7 +88,7 @@ export function WhatWeDo() {
               <div
                 key={service.title}
                 className={`rounded-xl p-8 cursor-pointer border transition-all ${
-                  isActive ? 'bg-gray-100 border-[#025AFA] shadow-md' : 'hover:bg-gray-50'
+                  isActive ? 'bg-gray-100  shadow-md' : 'hover:bg-gray-50'
                 }`}
                 onClick={() => setSelectedService(service.title)}
               >
