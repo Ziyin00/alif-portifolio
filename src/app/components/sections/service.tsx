@@ -69,7 +69,7 @@ export function WhatWeDo() {
         </div>
 
         {/* Main Image */}
-        <div className="relative mt-16 w-full">
+        <div className="relative mt-16 w-full md:block hidden">
           <Image
             key={displayedImage}
             src={displayedImage ?? '/defualt.gif'}
