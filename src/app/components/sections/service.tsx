@@ -72,7 +72,7 @@ export function WhatWeDo() {
         <div className="relative mt-16 w-full">
           <Image
             key={displayedImage}
-            src={displayedImage}
+            src={displayedImage ?? '/defualt.gif'}
             alt="Our Services"
             width={1000}
             height={400}
