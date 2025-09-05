@@ -27,19 +27,19 @@ const services = [
     icon: BookOpenIcon,
     title: 'Custom Software Development',
     description: 'Tailored solutions for your unique business needs.',
-    image: '/custom-1.jpeg',
+    image: '/custom-2.jpeg',
   },
   {
     icon: LinkIcon,
     title: 'Web & Mobile Applications',
     description: 'Sleek, user-friendly, and high-performing apps.',
-    image: '/web-1.jpeg',
+    image: '/web-2.jpeg',
   },
   {
     icon: InformationCircleIcon,
     title: 'AI Solutions',
     description: 'AI Solutions provides secure, scalable, and intelligent cloud integrations.',
-    image: '/ai.jpeg',
+    image: '/ai_solutions-1.jpeg',
   },
 ];
 
